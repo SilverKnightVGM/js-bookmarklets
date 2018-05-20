@@ -1,0 +1,15 @@
+// Check variable to only execute code once
+var check = document.getElementById("filmstrip");
+
+//Only executed once, otherwise, elem would be null the second time around
+if (check != null) {
+    var elem = document.getElementById("filmstrip");
+    var p = document.getElementsByClassName('filmstrip')[0];
+}
+
+//Hides or shows Google Slides Sidebar
+if (p.contains(elem)) {
+    elem.parentNode.removeChild(elem);
+} else {
+    p.appendChild(elem);
+}

@@ -1,0 +1,5 @@
+s = window.location.href;
+if (s.indexOf("drive.google") >= 0) {
+    var p = document.getElementsByClassName('a-xf-vzJc7b-To')[0];
+    p.remove();
+}

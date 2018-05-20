@@ -1,0 +1,11 @@
+//Only works with Youtube Magic Actions installed
+
+//Get webpage html
+var allHTML = document.getElementsByTagName("html")[0];
+
+//removes or adds the specific tags to expand the video
+if (allHTML.classList.contains('ma-exp') || allHTML.classList.contains('ma-exp-old')) {
+    allHTML.classList.remove('ma-exp', 'ma-exp-old');
+} else {
+    allHTML.classList.add('ma-exp', 'ma-exp-old');
+}

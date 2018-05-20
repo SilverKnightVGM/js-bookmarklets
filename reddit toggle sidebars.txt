@@ -1,0 +1,9 @@
+//Toggle right side bar
+$("div.side").toggle();
+//Toggle left sidebar if RES is installed
+var b = document.body;
+if (b.classList.contains('listing-chooser-collapsed')) {
+	b.classList.remove('listing-chooser-collapsed');
+} else {
+	b.classList.add('listing-chooser-collapsed');
+}

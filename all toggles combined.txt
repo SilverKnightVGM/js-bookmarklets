@@ -1,0 +1,31 @@
+javascript: currentURL = window.location.href;
+if (currentURL.indexOf("drive.google") >= 0) {
+	var p = document.getElementsByClassName('a-xf-vzJc7b-To')[0];
+	p.remove();
+} else if (currentURL.indexOf("docs.google.com/presentation") >= 0) {
+	var check = document.getElementById("filmstrip");
+	if (check != null) {
+		var elem = document.getElementById("filmstrip");
+		var p = document.getElementsByClassName('filmstrip')[0];
+	}
+	if (p.contains(elem)) {
+		elem.parentNode.removeChild(elem);
+	} else {
+		p.appendChild(elem);
+	}
+} else if (currentURL.indexOf("youtube.com") >= 0) {
+	var allHTML = document.getElementsByTagName("html")[0];
+	if (allHTML.classList.contains('ma-exp') || allHTML.classList.contains('ma-exp-old')) {
+		allHTML.classList.remove('ma-exp', 'ma-exp-old');
+	} else {
+		allHTML.classList.add('ma-exp', 'ma-exp-old');
+	}
+} else if (currentURL.indexOf("reddit.com") >= 0) {
+	$("div.side").toggle();
+	var b = document.body;
+	if (b.classList.contains('listing-chooser-collapsed')) {
+		b.classList.remove('listing-chooser-collapsed');
+	} else {
+		b.classList.add('listing-chooser-collapsed');
+	}
+}
