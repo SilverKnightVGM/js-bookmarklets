@@ -1,0 +1,23 @@
+javascript: currentURL = window.location.href;
+if (currentURL.indexOf("docs.google.com/presentation") >= 0) {
+	var check = document.getElementById("filmstrip");
+	if (check != null) {
+		var elem = document.getElementById("filmstrip");
+		var p = document.getElementsByClassName('filmstrip')[0];
+	}
+	if (p.contains(elem)) {
+		elem.parentNode.removeChild(elem);
+	} else {
+		p.appendChild(elem);
+	}
+} else if (currentURL.indexOf("youtube.com") >= 0) {
+	"use strict";!function(window,document){var canvas=document.createElement("canvas"),video=document.querySelector("video"),ctx=canvas.getContext("2d");canvas.width=parseInt(video.offsetWidth),canvas.height=parseInt(video.offsetHeight),ctx.drawImage(video,0,0,canvas.width,canvas.height);var a=document.createElement("a");a.download="snap-"+canvas.width+"x"+canvas.height+"-"+video.currentTime+".jpg",a.href=canvas.toDataURL("image/jpeg"),document.body.appendChild(a).click(),a.remove()}(window,document);
+} else if (currentURL.indexOf("reddit.com") >= 0) {
+	$("div.side").toggle();
+	var b = document.body;
+	if (b.classList.contains('listing-chooser-collapsed')) {
+		b.classList.remove('listing-chooser-collapsed');
+	} else {
+		b.classList.add('listing-chooser-collapsed');
+	}
+}
